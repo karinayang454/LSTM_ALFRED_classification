@@ -16,9 +16,9 @@ For example, the instructions for [an example task](https://askforalfred.com/?vi
 
 ## Clone this Repo
 ```
-git clone https://github.com/GLAMOR-USC/CSCI499_NaturalLanguageforInteractiveAI.git
+git clone https://github.com/karinayang454/LSTM_ALFRED_classification.git
 
-cd CSCI499_NaturalLanguageforInteractiveAI/hw1
+cd LSTM_ALFRED_classification
 
 export PYTHONPATH=$PWD:$PYTHONPATH
 ```
@@ -27,12 +27,22 @@ export PYTHONPATH=$PWD:$PYTHONPATH
 
 ```
 # first create a virtualenv 
-virtualenv -p $(which python3) ./hw1
+conda create -n my_env
 
 # activate virtualenv
-source ./hw1/bin/activate
+conda activate my_env
 
 # install packages
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
+## To run
 
+```
+python train.py 
+  --in_data_fn=lang_to_sem_data.json 
+  --model_output_dir=experiments/lstm 
+  --batch_size=1024 
+  --num_epochs=15 
+  --val_every=3 
+  --force_cpu 
+```
