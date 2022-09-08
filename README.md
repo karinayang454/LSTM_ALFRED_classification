@@ -1,5 +1,5 @@
 
-# Coding Assignment #1
+# LSTM ALFRED Classification: Coding Assignment #1
 
 This repo presents an implementation of a basic LSTM model that classifies [ALFRED](https://askforalfred.com/) instructions based on the high-level action they are communicating and the target object they are communicating about.
 
